@@ -1,4 +1,10 @@
-import { AppBar, IconButton, Toolbar, Typography, makeStyles } from '@material-ui/core';
+import {
+    AppBar,
+    IconButton,
+    Toolbar,
+    Typography,
+    makeStyles
+} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles(theme => ({
@@ -13,8 +19,8 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default () => {
-    const classes = useStyles();
+export default props => {
+    const classes = useStyles(props);
     return (
         <AppBar position="static">
             <Toolbar>
@@ -27,7 +33,7 @@ export default () => {
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>
-                    Kharkov Apartment
+                    My Application
                 </Typography>
             </Toolbar>
         </AppBar>
